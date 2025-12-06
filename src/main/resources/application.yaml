@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: TestPro
+# DeepNestedParam.java
+deep:
+  nested:
+    encryptKey: sk-1000
+    timeout: 1000
+    isEnable: true
+# BaseParam.java
+base:
+  param: BaseParam修改后请求ID
+# NestedParam1.java
+nested1:
+  param1:
+    businessId: 中层嵌套模型修改业务ID
+    amount: 1000.0
+# NestedParam2.java
+nested2:
+  param2:
+    userIds: 2001,2002,2003,2004
+    retryCount: 5
+# Layer3Service.java
+layer3:
+  service:
+    configMap:
+      liuxin: 100
+      zhangsan: 200
+      lisi: 300
+    isDebug: false
+# FinalBusinessService.java
+final:
+  business:
+    service:
+      whiteList: sk-100,sk-200,sk-300
+      extMap:
+        appId: "wx123456"
+        secret: "abcdefg"
+        callbackUrl: "http://localhost:8080/callback"
+      feeRate: 0.75
+      version: 3
+
+management:
+  endpoints:
+    web:
+        exposure:
+          include: "*"
